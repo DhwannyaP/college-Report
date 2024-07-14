@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head><title>javascript browser object </title>
+<style>
+.button:hover
+{
+background-color:#31B0ED
+}
+</style> </head>
+<body>
+
+<h1>JavaScript Window</h1>
+<p id="wind"></p>
+<h1>JavaScript Language</h1>
+<p id="lang"></p>
+<h1>JavaScript Prompt</h1>
+<p id="pro"></p>
+<button class="button"onclick="myFunction()">Try it</button>
+<h1>JavaScript History</h1>
+<p id="his"></p>
+<p>Display the number of URLs in the history list:</p>
+<button class="button" onclick="history()">Try it</button>
+<script>
+document.getElementById("wind").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px";
+document.getElementById("lang").innerHTML ="navigator.language is " + navigator.language;
+function myFunction() 
+{
+  let text;
+  let person = prompt("Please enter your name:" );
+  if (person == null || person == "") 
+  {
+    text = "User cancelled the prompt.";
+  } 
+  else 
+  {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("pro").innerHTML = text;
+}
+function history()
+{
+ document.getElementById("his").innerHTML = history.length;
+}
+</script>
+
+</body>
+</html>
